@@ -1,4 +1,11 @@
 package team.studentlab.projects.core.topic
 
-class TopicLabels {
+enum class TopicLabels (
+    val prefix: String
+){
+
+    HELP("Ajuda"),
+    NEW("Novidades"),
+    UPDATE("Atualização");
+
 }
