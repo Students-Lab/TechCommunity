@@ -11,7 +11,11 @@ class Topic (
 ) {
 
     private var likes: Int = 0;
+    private var likeByUser: MutableList<User> = mutableListOf();
+
     private var unlikes: Int = 0;
+    private var unlikeByUser: MutableList<User> = mutableListOf();
+
     private var comments: MutableList<TopicComments> = mutableListOf();
 
     public fun addComment(topicComments: TopicComments){
@@ -21,5 +25,28 @@ class Topic (
     public fun addComment(topicComments: Supplier<TopicComments>){
         comments.add(topicComments.get())
     }
+
+    public fun like(user: User){
+
+        if (unlikeByUser.contains(user)){
+            unlikes-=1;
+            unlikeByUser.remove(user);
+        }
+
+        likes+=1;
+        likeByUser.add(user);
+    }
+
+    public fun unlike(user: User){
+
+        if (likeByUser.contains(user)){
+            likes-=1;
+            likeByUser.remove(user);
+        }
+
+        unlikes+=1;
+        unlikeByUser.add(user);
+    }
+
 
 }
