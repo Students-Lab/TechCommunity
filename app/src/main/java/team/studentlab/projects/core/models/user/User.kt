@@ -1,4 +1,4 @@
-package team.studentlab.projects.core.user
+package team.studentlab.projects.core.models.user
 
 import java.util.UUID
 

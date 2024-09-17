@@ -1,7 +1,7 @@
-package team.studentlab.projects.core.topic
+package team.studentlab.projects.core.models.topic
 
 import androidx.core.util.Supplier
-import team.studentlab.projects.core.user.User
+import team.studentlab.projects.core.models.user.User
 
 class Topic (
     val owner: User,

@@ -1,4 +1,4 @@
-package team.studentlab.projects.core.topic
+package team.studentlab.projects.core.models.topic
 
 enum class TopicLabels (
     val prefix: String
